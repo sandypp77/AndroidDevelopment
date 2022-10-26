@@ -16,4 +16,8 @@
         android:enabled="true"
         android:icon="@drawable/ic_news"
         android:title="News"/>
+    <item android:id="@+id/menu_favorite"
+        android:enabled="true"
+        android:icon="@drawable/ic_favorite"
+        android:title="Favorite"/>
 </menu>

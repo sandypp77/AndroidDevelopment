@@ -5,10 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.androiddevelopment.R
 import com.example.androiddevelopment.databinding.ActivityMainBinding
-import com.example.androiddevelopment.ui.fragment.ApplicationFragment
-import com.example.androiddevelopment.ui.fragment.HomeFragment
-import com.example.androiddevelopment.ui.fragment.NewsFragment
-import com.example.androiddevelopment.ui.fragment.ProfileFragment
+import com.example.androiddevelopment.ui.fragment.*
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -35,6 +32,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.menu_news -> {
                     showFragment(R.id.container, NewsFragment.newInstance("", ""))
+                }
+                R.id.menu_favorite -> {
+                    showFragment(R.id.container, FavoriteFragment.newInstance("", ""))
                 }
             }
             true

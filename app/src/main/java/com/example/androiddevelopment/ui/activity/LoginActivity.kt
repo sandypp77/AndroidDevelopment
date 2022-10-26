@@ -8,6 +8,7 @@ import android.text.Html
 import android.util.Patterns
 import android.widget.Toast
 import com.example.androiddevelopment.databinding.ActivityLoginBinding
+import com.pixplicity.easyprefs.library.Prefs
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -23,6 +24,8 @@ class LoginActivity : AppCompatActivity() {
         binding.btnLogin.setOnClickListener {
             if (binding.txtPassword.text.toString().isNotEmpty() && binding.txtEmail.text.toString().isNotEmpty()){
                 if (Patterns.EMAIL_ADDRESS.matcher(binding.txtEmail.text.toString()).matches()) {
+                    Prefs.putBoolean("isLogin", true)
+
                     Toast.makeText(this@LoginActivity, "Login Success", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this@LoginActivity, MainActivity::class.java)
                     startActivity(intent)

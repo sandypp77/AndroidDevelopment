@@ -39,6 +39,7 @@ android {
 def activity_version = "1.6.0"
 def fragment_version = "1.5.0"
 def lifecycle_version = "2.5.1"
+def room_version = "2.4.3"
 
 dependencies {
     implementation 'androidx.core:core-ktx:1.7.0'
@@ -81,4 +82,15 @@ dependencies {
 
     //Refresh
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.1.0")
+
+    //Splashscreen
+    implementation 'androidx.core:core-splashscreen:1.0.0'
+
+    //Shared Preference
+    implementation 'com.pixplicity.easyprefs:EasyPrefs:1.10.0'
+
+    //room - sqlite
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-rxjava2:$room_version"
 }

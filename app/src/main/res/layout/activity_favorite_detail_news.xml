@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.fragment.DetailedNewsFragment">
+    tools:context=".ui.fragment.FavoriteFragment">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -75,13 +75,13 @@
                     </FrameLayout>
 
                     <Button
-                        android:id="@+id/btnFavorites"
+                        android:id="@+id/btnRFavorites"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:background="@color/blueMain"
+                        android:background="@color/red"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="Add to Favorites"
+                        android:text="Remove from Favorites"
                         android:textColor="@color/black"
                         android:textSize="12dp" />
 
